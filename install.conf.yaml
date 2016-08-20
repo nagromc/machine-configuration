@@ -4,3 +4,4 @@
 
 - link:
     /etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla: etc/polkit-1/localauthority/50-local.d/com.ubuntu.enable-hibernate.pkla
+    /etc/X11/xorg.conf.d/50-synaptics.conf: etc/X11/xorg.conf.d/50-synaptics.conf
