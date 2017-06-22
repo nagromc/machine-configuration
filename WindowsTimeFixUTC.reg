@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; From https://help.ubuntu.com/community/UbuntuTime?action=AttachFile&do=view&target=WindowsTimeFixUTC.reg
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\TimeZoneInformation]
+     "RealTimeIsUniversal"=dword:00000001
