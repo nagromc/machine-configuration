@@ -1,0 +1,118 @@
+Shamelessly copied from https://pastebin.com/m51ekHCp
+
+
+
+WARNING! Be very careful that you do not accidentally disable all ways that you can click. If you have reassigned your left click button to another function, and then you uncheck "Enable" on one finger tapping in the GUI, you will have to plug in an external USB mouse or remote into the machine with remote desktop (or something similar) or use Windows Speech Recognition or figure out some other way to re-check the "Enable" box under one finger tapping in the GUI in order to restore click functionality. I will not be held responsible if you do not have any of these methods available and you end up (temporarily) bricking your laptop. You have been warned. (But really, just don't uncheck that box and you will be fine).
+
+
+HKEY_CURRENT_USER\Software\Elantech\SmartPad:
+	Button_Left; Button_Right; Tap_Two_Finger; Tap_Three_Finger; ThreeFingerMoveUp_Func; ThreeFingerMoveDown_Func:
+		0 Click/Select
+			Left click default
+		1 Pop-up Menu
+			Right Click default
+		2 Middle Button
+		3 Internet Back
+		4 Internet Forward
+		5 Maximize Window
+		6 Minimize Window
+		7 None
+			Disables the button
+		8 Page Up
+		9 Page Down
+		10 Run...
+			Runs a file of your chosing. Can be anything - a program, a document, an mp3, etc. Also see <Gesture>_Ex and <Gesture>_Path
+		11 Scroll Down
+		12 Scroll Left
+		13 Scroll Right
+		14 Scroll Up
+		15 Start Menu
+		16 Zoom Out
+		17 Zoom In
+		18 Close Window
+		19 Return to Desktop
+			Default behavior for three finger swipe down.
+		20 My Favorites
+			Shows a list of files. Initially it is empty, but there is a link at the bottom of the window that appears that you can click that will let you select files to add to the list.
+		21 Show My Computer
+		22 Switch Windows
+			Alt-tab style window switcher.
+			Behavior:
+				Left/Right Buttons:
+					Two-finger scroll or click the button the function is assigned to to switch between windows.
+					Click, press enter, or perform a Show Desktop gesture (#19) to select a window.
+					Three finger swipe left/right will select the window to the left or right of the one currently shown when you are scrolling between windows.
+					Very buggy, though, because often times the alt key will become "stuck down" (as if sticky keys were enabled), and you will have to press it on your keyboard in order to un-stick it.
+					Cursor is not locked.
+					Reccomend not using this function with these buttons.
+				Three-finger swipe up/down:
+					Move single finger left/right to switch between windows.
+					Tap/click to exit once you have selected the desired window.
+					Cursor is locked.
+				Other gestures: Untested.
+		23 Switch Windows
+			Aero Flip 3D style window switcher.
+			Different behavior than #32 for some gestures.
+			Behavior:
+				Left/Right Buttons:
+					Two-finger scroll or click the button that the function is assigned to to switch between windows. Two-finger scroll is extremely sensitive with this function.
+					Click on the window that you wish to select (normal click or tap, not a click with the button being used for this function).
+					Very buggy, though, because often times the Windows key will become "stuck down" (as if sticky keys were enabled), and you will have to press it on your keyboard in order to un-stick it (and the Start Menu will pop up anyway).
+					Cursor is not locked.
+					Reccomend not using this function with these buttons.
+				Three-finger swipe up/down:
+					Move single finger left/right to switch between windows.
+					Tap/click to focus the window underneath your cursor (not necessarily the one in the front/top of the stack.
+					Press enter to focus the window on in the front/top of the stack.
+					Cursor is locked.
+				Other gestures: Untested.
+		24 Start Slide Show
+		25 Stop Slide Show
+		26 Open Windows Search Dialog
+			Displayed as "No Function" in the GUI.
+		27 Double-Click
+			Displayed as "No Function" in the GUI.
+		28 Lock Computer
+			Same function as WinKey+L.
+			Displayed as "No Function" in the GUI.
+		29 Turn off display/keyboard backlight
+			Not the same as Fn+F7 and Fn+F3; simply move cursor or press a key to turn back on.
+			Displayed as "No Function" in the GUI.
+		30 ???
+			Displayed as "No Function" in the GUI.
+		31 ???
+			Displayed as "No Function" in the GUI.
+		32 Switch Windows (Aero Flip 3D; move three fingers left/right to switch between windows; must click on the window you wish to focus; cursor is enabled) (Default for three finger swipe up)
+			Behavior:
+				Left/Right Buttons:
+					Exact same behavior as #22.
+					Reccomend not using this function with these buttons.
+				Three-finger swipe up/down:
+					Three-finger swipe left/right to switch between windows.
+					Click, press enter, or perform a Show Desktop gesture (#19) to select a window.
+				Other gestures: Untested.
+		33 ???
+			Displayed as "No Function" in the GUI.
+			Didn't test beyond 33 because it felt like 32 was probably the end.
+
+	Button_Middle; Button_Middle_Ex; Button_Middle_Path:
+		No effect. Pressing the bottom-center of the touchpad does not trigger this function.
+
+	Button_Left_Ex; Button_Right_Ex; Tap_Two_Finger_Ex; Tap_Three_Finger_Ex:
+		Just a visual label that is shown in the GUI when "Run..." (#10) is selected as the function for a gesture. Serves no real functional purpose other than a hint at what you have selected as the target of the run command.
+
+	Button_Left_Path; Button_Right_Path; Tap_Two_Finger_Path; Tap_Three_Finger_Path:
+		Path to a file that will be ran if the gesture's function is set to "Run..." (#10).
+
+	ButtonLeftFunStaticText; ButtonRightFunStaticText; Tap2FunStaticText:
+		Set to 0 to allow configuration of the functions of these gestures via dropdown menu in the GUI. Set to 1 to disable the dropdown configuration for the button and only show the text representing the function that a button is set to perform. Note that if "Run..." is selected, you may still configure the file to be ran using the GUI if this setting is set to 1.
+
+	Tap_Two_Finger_ShowItem; Tap_Three_Finger_ShowItem:
+		Set to 1 to show these settings in the GUI.
+		Set to 0 to hide these settings from the GUI.
+
+	FourFingerMoveUp_Enable; FourFingerMoveDown_Enable; FourFingerMoveLeft_Enable; FourFingerMoveRight_Enable:
+		Seem to have no effect. Four finger swipes do not work after enabling these (setting them to 1, default is 0)
+
+	FourFingerMoveUp_Func; FourFingerMoveDown_Func; FourFingerMoveLeft_Func; FourFingerMoveRight_Func:
+		Seem to have no effect. Four finger swipes do not work after setting these to what should be valid functions.

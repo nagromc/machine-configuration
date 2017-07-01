@@ -6,6 +6,8 @@ Machine configuration for my Samsung Ativ Book 9 plus.
 
 This disables the "regular right click mouse" when a click is made in the bottom right area of the clickpad to make the entire clickpad left-clickable. This also enables the "regular middle click mouse" when a click is made with three fingers.
 
+See elan-clickpad-settings.txt for more information.
+
 
 ##`WindowsTimeFixUTC.reg`
 
