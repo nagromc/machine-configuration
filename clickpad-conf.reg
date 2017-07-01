@@ -2,6 +2,8 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Elantech\SmartPad]
 "ClickPad_RightCorner_Click_Func"=dword:00000000
+"ClickPad_Three_Finger_Click_Enable"=dword:00000001
+"ClickPad_Three_Finger_Click_Func"=dword:00000002
 "Tap_Two_Finger_Enable"=dword:00000001
 "Tap_Two_Finger"=dword:00000001
 "Tap_Three_Finger_Enable"=dword:00000001
