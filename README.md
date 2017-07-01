@@ -6,4 +6,4 @@ Machine configuration for my built desktop.
 `WindowsTimeFixUTC.reg`
 -----------------------
 
-This prevent the clock to be changed by Windows when switching from/to Ubuntu.
+This prevents the clock to be changed by Windows when switching from/to Ubuntu.
